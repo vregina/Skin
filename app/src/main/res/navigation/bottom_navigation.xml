@@ -17,5 +17,11 @@
         tools:layout="@layout/fragment_rewards">
     </fragment>
 
+    <fragment
+        android:id="@+id/CalendarFragment"
+        android:name="com.example.skin.calendar.view.CalendarFragment"
+        tools:layout="@layout/fragment_calendar">
+    </fragment>
+
 </navigation>
 

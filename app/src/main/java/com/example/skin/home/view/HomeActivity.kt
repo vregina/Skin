@@ -11,35 +11,15 @@ import com.example.skin.rewards.view.RewardsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
-    val homeFragment = HomeFragment()
-    val rewardsFragment = RewardsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        setSupportActionBar(findViewById(R.id.toolbar2))
 
-        val navView: BottomNavigationView = findViewById(R.id.bnv_menu)
-        val navController = findNavController(R.id.container_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+        findViewById<BottomNavigationView>(R.id.bnv_menu)
+            .setupWithNavController(
+                findNavController(R.id.container_fragment)
             )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-
-//        setSupportActionBar(findViewById(R.id.toolbar))
-    }
-
-    private fun showHomeFragment() {
-        supportFragmentManager.beginTransaction().replace(R.id.container, homeFragment, "qlq")
-            .commit()
-    }
-
-    private fun showRewardsFragment() {
-        supportFragmentManager.beginTransaction().replace(R.id.container, rewardsFragment, "ll")
-            .commit()
     }
 }
