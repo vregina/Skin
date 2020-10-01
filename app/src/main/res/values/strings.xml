@@ -9,8 +9,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="login_facebook_button_text">Entre com Facebook</string>
     <string name="login_skin_logo_text">Skin</string>
     <string name="login_text">Login</string>
     <string name="login_welcome_text">Bem-vindo ao Skin</string>
@@ -18,4 +18,33 @@
     <string name="login_password_text">Senha</string>
     <string name="login_register_text">Não tem uma conta? Cadastre-se</string>
     <string name="login_button_text">Entrar</string>
+    <string name="login_facebook_button_text">Entre com Facebook</string>
+    <string name="login_acessibility_peach_description"></string>
+
+
+    <string name="home_peach_counter">12</string>
+    <string name="home_morning_text">Manhã</string>
+    <string name="home_button_plus">+</string>
+    <string name="home_add_step">Adicionar passo</string>
+    <string name="home_night_text">Noite</string>
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="rewards_title">Recompensas</string>
+    <string name="rewards_coupon_epoca">15% OFF Época Coesmétics</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
 </resources>

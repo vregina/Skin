@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
 import com.example.skin.R
+import com.example.skin.login.LoginActivity
 import com.example.skin.login.presenter.LoginFragmentPresenter
-import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -25,15 +24,15 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        return inflater.inflate(R.layout.fragment_login_first, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter = LoginFragmentPresenter(this)
-        val textEmail = view.findViewById<EditText>(R.id.editTextTextPersonName)
+        val textEmail = view.findViewById<EditText>(R.id.editTextTextEmailAddress)
 
-        val textSenha = view.findViewById<EditText>(R.id.editTextTextPersonName2)
+        val textSenha = view.findViewById<EditText>(R.id.editTextTextPassword)
 
         val buttonLogin = view.findViewById<Button>(R.id.bt_login)
         buttonLogin.setOnClickListener { v ->
@@ -43,6 +42,7 @@ class LoginFragment : Fragment() {
 
     fun loginSucesso(){
         Toast.makeText(view?.context, "Login feito com sucesso", Toast.LENGTH_LONG).show()
+        (activity as? LoginActivity)?.startHomeActivity()
     }
 
     fun loginFracasso(){
