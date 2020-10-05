@@ -6,17 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".rewards.view.RewardsFragment">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="168dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="96dp"
-            android:fontFamily="@font/lato"
-            android:text="Calendario MudaFuck"
-            android:textColor="#000000"
-            android:textSize="24sp"
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="410dp"
+            android:layout_height="293dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView3"
+                    android:layout_width="160dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Cadastrou um produto"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView2" />
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView4"
+                    android:layout_width="138dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Indicou a um amigo"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView3" />
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView"
+                    android:layout_width="138dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Nova rotina criada"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView2"
+                    android:layout_width="194dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="24dp"
+                    android:text="1 semana de rotina completa"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Objetivos"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

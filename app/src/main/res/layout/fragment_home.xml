@@ -18,8 +18,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="77dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/home_morning_text"
+            android:textColor="#616161"
+            android:textSize="23sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_sun_home"
+            app:tint="#616161" />
+
         <Button
-            android:id="@+id/bt_plus_home"
+            android:id="@+id/bt_plus_home3"
             style="@style/MyAppButton"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -36,31 +59,6 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="77dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="8dp"
-            android:fontFamily="@font/lato"
-            android:text="@string/home_morning_text"
-            android:textColor="#616161"
-            android:textSize="23sp"
-            app:layout_constraintEnd_toStartOf="@+id/bt_plus_home"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toTopOf="@+id/imageView8" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_sun_home"
-            app:tint="#616161" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

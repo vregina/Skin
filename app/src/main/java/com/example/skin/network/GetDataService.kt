@@ -13,5 +13,4 @@ interface GetDataService {
     @Multipart
     @POST("/auth")
     fun doLogin(@Part("user") user: String, @Part("password") password: String) : Call<LoginResponse>
-//    fun doLogin(): Call<LoginResponse>
 }

@@ -36,10 +36,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_login_form"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_width="273dp"
+                android:layout_height="196dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <TextView
@@ -54,13 +55,14 @@
 
                 <EditText
                     android:id="@+id/editTextTextEmailAddress"
-                    android:layout_width="291dp"
+                    android:layout_width="240dp"
                     android:layout_height="47dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
                     android:autofillHints="Email"
                     android:ems="10"
                     android:inputType="textEmailAddress"
-                    app:layout_constraintStart_toStartOf="@+id/cl_login_form"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <TextView
@@ -75,12 +77,12 @@
 
                 <EditText
                     android:id="@+id/editTextTextPassword"
-                    android:layout_width="289dp"
+                    android:layout_width="240dp"
                     android:layout_height="47dp"
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:inputType="textPassword"
-                    app:layout_constraintStart_toStartOf="@+id/cl_login_form"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <ImageView
@@ -88,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
                     app:srcCompat="@drawable/ic_eye_login" />
@@ -97,8 +99,10 @@
                     android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress"
+                    app:layout_constraintHorizontal_bias="0.555"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress"
                     app:srcCompat="@drawable/ic_person_login" />
@@ -107,9 +111,10 @@
                     android:id="@+id/imageView12"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
                     app:srcCompat="@drawable/ic_padlock_login_2" />
 
@@ -181,13 +186,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
                 tools:ignore="RtlSymmetry" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="48dp" />
 
             <ImageView
                 android:id="@+id/imageView"
