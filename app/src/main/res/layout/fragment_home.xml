@@ -7,12 +7,21 @@
     tools:context=".home.view.HomeActivity">
 
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="nenhum item adicionado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="wrap_content"
         android:background="#2CC4C4C4"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,18 +45,25 @@
             android:layout_height="25dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_sun_home"
             app:tint="#616161" />
 
+        <LinearLayout
+            android:id="@+id/bt_plus_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
         <Button
-            android:id="@+id/bt_plus_home3"
             style="@style/MyAppButton"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
             android:background="@drawable/buttomplusshape"
             android:fontFamily="@font/lato_bold"
             android:shadowColor="#A8A8A8"
@@ -56,9 +72,8 @@
             android:shadowRadius="5"
             android:text="@string/home_button_plus"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="18sp" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -66,31 +81,38 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginTop="16dp"
         android:background="#2CC4C4C4"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        <Button
-            android:id="@+id/bt_plus_home2"
-            style="@style/MyAppButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/buttomplusshape"
-            android:fontFamily="@font/lato_bold"
-            android:shadowColor="#A8A8A8"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="5"
-            android:text="@string/home_button_plus"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
+        <LinearLayout
+            android:id="@+id/bt_plus_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                style="@style/MyAppButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/buttomplusshape"
+                android:fontFamily="@font/lato_bold"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="5"
+                android:text="@string/home_button_plus"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
 
         <ImageView
             android:id="@+id/imageView10"
@@ -111,11 +133,29 @@
             android:text="@string/home_night_text"
             android:textColor="#616161"
             android:textSize="23sp"
-            app:layout_constraintEnd_toStartOf="@+id/bt_plus_home2"
+            app:layout_constraintEnd_toStartOf="@+id/bt_plus_night"
             app:layout_constraintHorizontal_bias="0.035"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="@+id/imageView10" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="nenhum item adicionado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_teste"
+        android:layout_width="match_parent"
+        android:layout_height="497dp"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_home"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
