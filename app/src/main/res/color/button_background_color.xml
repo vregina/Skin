@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item android:drawable="@drawable/bt_plus_shape"/>-->
+<!--    <item android:drawable="@drawable/bt_orange_shape"/>-->
+
+    <item android:state_pressed="true" android:color="@color/orangeButton"/>
+    <item android:state_selected="true" android:color="@color/orangeButton"/>
+
+    <item android:color="#BEBEBE"/>
+
+</selector>

@@ -20,10 +20,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="410dp"
             android:layout_height="293dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/calendarView">
 
@@ -33,17 +33,17 @@
                     android:layout_height="20dp"
                     android:layout_marginTop="24dp"
                     android:text="Cadastrou um produto"
-                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_empty_list_morning"
                     app:layout_constraintTop_toBottomOf="@+id/checkedTextView2" />
 
-                <CheckedTextView
-                    android:id="@+id/checkedTextView4"
-                    android:layout_width="138dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="24dp"
-                    android:text="Indicou a um amigo"
-                    app:layout_constraintStart_toStartOf="@+id/textView2"
-                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView3" />
+                <!--                <CheckedTextView-->
+                <!--                    android:id="@+id/checkedTextView4"-->
+                <!--                    android:layout_width="138dp"-->
+                <!--                    android:layout_height="20dp"-->
+                <!--                    android:layout_marginTop="24dp"-->
+                <!--                    android:text="Indicou a um amigo"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/tv_empty_list_morning"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView3" />-->
 
                 <CheckedTextView
                     android:id="@+id/checkedTextView"
@@ -51,8 +51,8 @@
                     android:layout_height="20dp"
                     android:layout_marginTop="24dp"
                     android:text="Nova rotina criada"
-                    app:layout_constraintStart_toStartOf="@+id/textView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintStart_toStartOf="@+id/tv_empty_list_morning"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_empty_list_morning" />
 
                 <CheckedTextView
                     android:id="@+id/checkedTextView2"
@@ -60,11 +60,11 @@
                     android:layout_height="20dp"
                     android:layout_marginTop="24dp"
                     android:text="1 semana de rotina completa"
-                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_empty_list_morning"
                     app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/tv_empty_list_morning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"

@@ -15,9 +15,11 @@ class RetrofitClientInstance {
             val httpClient = OkHttpClient.Builder()
             httpClient.addInterceptor(log)
 
-            return Retrofit.Builder().baseUrl("https://skare-api.herokuapp.com/")
+            return Retrofit.Builder().baseUrl("https://private-126a5-skin.apiary-mock.com/")
                 .addConverterFactory(GsonConverterFactory.create()).client(httpClient.build()).build()
         }
     }
 
 }
+
+//"https://skare-api.herokuapp.com/

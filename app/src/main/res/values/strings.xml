@@ -28,6 +28,15 @@
     <string name="home_add_step">Adicionar passo</string>
     <string name="home_night_text">Noite</string>
 
+    <string name="Skin">Tipos de Tratamento</string>
+    <string-array name="product_type">
+        <item>Tipo de Tratamento</item>
+        <item>Hidratante</item>
+        <item>Protetor solar</item>
+        <item>Limpeza</item>
+    </string-array>
+
+
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

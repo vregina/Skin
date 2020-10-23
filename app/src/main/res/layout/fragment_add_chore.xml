@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calendar.AddChoreActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="32dp"
+        android:background="#2CC4C4C4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/sp_product_type"
+            style="@style/mySpinnerItemStyle"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:entries="@array/product_type"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_product_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg_gray_text"
+        android:layout_width="411dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="24dp"
+        android:background="#2CC4C4C4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_gray">
+
+        <EditText
+            android:id="@+id/et_product_type"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="Nome do produto"
+            android:inputType="textPersonName"
+            android:textColor="#616161"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03:30"
+        android:textSize="64sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_clock"
+        app:layout_constraintEnd_toEndOf="@+id/bt_clock"
+        app:layout_constraintStart_toStartOf="@+id/bt_clock"
+        app:layout_constraintTop_toTopOf="@+id/bt_clock" />
+
+    <LinearLayout
+        android:id="@+id/bt_clock"
+        android:layout_width="273dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_gray_text"></LinearLayout>
+
+    <Button
+        android:id="@+id/bt_finish"
+        style="@style/MyAppButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:background="@drawable/bt_orange_shape"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="Adicionar"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+    <Button
+        android:id="@+id/bt_monday"
+        style="@style/MyAppButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/button_background_color"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="S"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+    <Button
+        android:id="@+id/bt_tuesday"
+        style="@style/MyAppButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/button_background_color"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="T"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/bt_monday"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+    <Button
+        android:id="@+id/bt_wednesday"
+        style="@style/MyAppButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/button_background_color"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="Q"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/bt_tuesday"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+    <Button
+        android:id="@+id/bt_thursday"
+        style="@style/MyAppButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/button_background_color"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="Q"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/bt_wednesday"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+    <Button
+        android:id="@+id/bt_friday"
+        style="@style/MyAppButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/button_background_color"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="S"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/bt_thursday"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+
+    <Button
+        android:id="@+id/bt_saturday"
+        style="@style/MyAppButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/button_background_color"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="S"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/bt_friday"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+    <Button
+        android:id="@+id/bt_sunday"
+        style="@style/MyAppButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/button_background_color"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:text="D"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_saturday"
+        app:layout_constraintTop_toBottomOf="@+id/bt_clock" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

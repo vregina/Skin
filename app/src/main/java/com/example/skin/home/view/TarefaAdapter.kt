@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.skin.R
 import kotlinx.android.synthetic.main.item_home.view.*
 
-class TarefaAdapter(val tarefas: MutableList<Tarefa>) :
+class TarefaAdapter(private val tarefas: MutableList<Tarefa>) :
     RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TarefaViewHolder {
@@ -24,9 +24,9 @@ class TarefaAdapter(val tarefas: MutableList<Tarefa>) :
     inner class TarefaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(tarefa: Tarefa) {
             with(tarefa) {
-                itemView.tv_nome_do_produto.text = nomeDoProduto.first().toString()
-                itemView.tv_tipo_de_tratamento.text = tipoDeTratamento.first().toString()
-                itemView.cb_home.isChecked = true
+                itemView.tv_nome_do_produto.text = nomeDoProduto
+                itemView.tv_tipo_de_tratamento.text = tipoDeTratamento
+                itemView.cb_home.isChecked = concluido
             }
 
         }

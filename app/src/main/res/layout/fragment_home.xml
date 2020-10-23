@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tv_empty_list_night"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -53,7 +53,7 @@
             app:tint="#616161" />
 
         <LinearLayout
-            android:id="@+id/bt_plus_day"
+            android:id="@+id/bt_plus_morning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="24dp"
@@ -64,7 +64,9 @@
             style="@style/MyAppButton"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:background="@drawable/buttomplusshape"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/bt_plus_shape"
             android:fontFamily="@font/lato_bold"
             android:shadowColor="#A8A8A8"
             android:shadowDx="2"
@@ -86,12 +88,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/rv_chores_morning">
 
         <LinearLayout
             android:id="@+id/bt_plus_night"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -100,7 +104,9 @@
                 style="@style/MyAppButton"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:background="@drawable/buttomplusshape"
+                android:background="@drawable/bt_plus_shape"
+                android:clickable="false"
+                android:focusable="false"
                 android:fontFamily="@font/lato_bold"
                 android:shadowColor="#A8A8A8"
                 android:shadowDx="2"
@@ -140,23 +146,57 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_empty_list_morning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="nenhum item adicionado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_teste"
+        android:id="@+id/rv_chores_morning"
         android:layout_width="match_parent"
-        android:layout_height="497dp"
+        android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/tv_empty_list_morning"
         tools:itemCount="3"
-        tools:listitem="@layout/item_home"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"/>
+        tools:listitem="@layout/item_home" />
+
+    <ProgressBar
+        android:id="@+id/pb_chores_morning"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="71dp"
+        android:layout_height="61dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_chores_morning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rv_chores_morning"
+        app:layout_constraintTop_toTopOf="@+id/rv_chores_morning" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chores_night"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/tv_empty_list_night"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_home" />
+
+    <ProgressBar
+        android:id="@+id/pb_chores_night"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="71dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="275dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_chores_night"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rv_chores_night"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+<!--        app:layout_constraintTop_toTopOf="@+id/rv_chores_night" -->
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

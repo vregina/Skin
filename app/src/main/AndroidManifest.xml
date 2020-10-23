@@ -12,9 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_peach"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".addchore.view.AddChoreActivity"></activity>
+        <activity android:name=".calendar.AddChoreActivity" />
         <activity android:name=".home.view.HomeActivity">
 
         </activity>
+
         <activity
             android:name=".login.LoginActivity"
             android:label="Skin"
@@ -27,7 +30,6 @@
         </activity>
         <activity android:name=".MainActivity">
         </activity>
-
 
         <meta-data
             android:name="preloaded_fonts"
