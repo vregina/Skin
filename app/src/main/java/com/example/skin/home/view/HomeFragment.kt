@@ -15,7 +15,7 @@ import com.example.skin.home.presenter.HomeFragmentPresenter
 
 class HomeFragment : Fragment() {
 
-    lateinit var presenter: HomeFragmentPresenter
+    private lateinit var presenter: HomeFragmentPresenter
     lateinit var recyclerViewNight: RecyclerView
     lateinit var recyclerViewMorning: RecyclerView
     lateinit var btPlusNight: LinearLayout
@@ -24,14 +24,20 @@ class HomeFragment : Fragment() {
     lateinit var tvEmptyListMorning: TextView
     lateinit var tvEmptyListNight: TextView
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
 
         presenter = HomeFragmentPresenter(this)
+    }
 
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onStart() {
+        super.onStart()
     }
 
     override fun onCreateView(
