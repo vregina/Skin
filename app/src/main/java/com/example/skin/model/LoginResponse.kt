@@ -7,13 +7,8 @@ class LoginResponse {
     @SerializedName("token")
     val token: String? = null
 
-    @SerializedName("Error")
-    val error: String = ""
+    @SerializedName("tyoe")
+    val type: String? = null
 
-    @SerializedName("user")
-    val user: String? = null
-
-    @SerializedName("pwd")
-    val pwd: String? = null
 
 }

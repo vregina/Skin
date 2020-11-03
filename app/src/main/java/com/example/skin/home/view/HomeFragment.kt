@@ -26,8 +26,7 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+
 
         presenter = HomeFragmentPresenter(this)
     }
@@ -37,6 +36,11 @@ class HomeFragment : Fragment() {
     }
 
     override fun onStart() {
+        arguments?.let {
+
+            val x = it.getString("TESTE")
+            val y = 1
+        }
         super.onStart()
     }
 
@@ -130,6 +134,7 @@ class HomeFragment : Fragment() {
     fun recebeChore(chore: Tarefa) {
         presenter.addChore(chore)
     }
+
 
 
     companion object {

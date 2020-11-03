@@ -1,11 +1,10 @@
-package com.example.skin.login
+package com.example.skin.login.view
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.skin.R
 import com.example.skin.home.view.HomeActivity
-import com.example.skin.login.view.LoginFragment
 
 class LoginActivity : AppCompatActivity() {
 

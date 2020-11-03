@@ -3,6 +3,7 @@ package com.example.skin.home.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.os.bundleOf
 import androidx.navigation.NavArgument
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -34,9 +35,14 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun updateChoreFragment(chore: Tarefa) {
-       navController.currentDestination?.let {
-            it.addArgument("TESTE", NavArgument.Builder().setDefaultValue("123").build())
-       }
+        navController.currentDestination.let {
+            (it as? HomeFragment)?.let {
+                it.recebeChore(chore)
+            }
+        }
+
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
