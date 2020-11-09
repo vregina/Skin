@@ -36,6 +36,14 @@
         <item>Limpeza</item>
     </string-array>
 
+    <string name="Generos">Generos</string>
+    <string-array name="gender_type">
+        <item>Gênero</item>
+        <item>Feminimo</item>
+        <item>Masculino</item>
+        <item>Outro</item>
+    </string-array>
+
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

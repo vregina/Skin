@@ -57,6 +57,8 @@ class AddChoreActivity : AppCompatActivity() {
         fun newIntent(context: Context): Intent {
             return Intent(context, AddChoreActivity::class.java)
         }
+
+
     }
 
 }

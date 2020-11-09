@@ -150,13 +150,11 @@ class AddChoreFragment : Fragment() {
 
         btFinish.setOnClickListener {
             presenter.setChoreName(productName.text.toString())
-//            Toast.makeText(view?.context, "Tarefa adicionada!", Toast.LENGTH_LONG).show()
+            Toast.makeText(view?.context, "Tarefa adicionada!", Toast.LENGTH_LONG).show()
         }
 
 
-//        btTuesday.setOnClickListener {
-//            btTuesday.setBackgroundDrawable(resources.getDrawable(R.drawable.bt_orange_shape))
-//        }
+
     }
 
     fun terminaERetorna(chore: Tarefa) {

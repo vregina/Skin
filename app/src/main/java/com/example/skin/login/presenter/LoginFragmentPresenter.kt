@@ -13,9 +13,9 @@ class LoginFragmentPresenter(private val view: LoginFragment) {
 //    var emailDoUsuario = ""
 //    var senhaDoUsuario = ""
 
-    fun facaLogin(email: String, senha: String) {
+    fun facaLogin(email: String, password: String) {
 
-        val forms = Forms(email, senha)
+        val forms = Forms(email, password)
 
         val service =
             RetrofitClientInstance.getRetrofitInstance().create(GetDataService::class.java)

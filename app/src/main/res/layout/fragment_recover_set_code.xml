@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_skin_text" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="262dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato"
+        android:text="Digite o código enviado em seu email."
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/et_email_register"
+        android:layout_width="296dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="36dp"
+        android:autofillHints="Email"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="93dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="96dp"
+        android:src="@drawable/ic_app_logo_peach"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_login"
+        style="@style/MyAppButton"
+        android:layout_width="214dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bt_orange_shape"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Confirmar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email_register" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

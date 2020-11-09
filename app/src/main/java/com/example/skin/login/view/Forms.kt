@@ -1,7 +1,8 @@
 package com.example.skin.login.view
 
-class Forms(email: String, senha: String) {
-
-    lateinit var email: String
-    lateinit var password: String
-}
+data class Forms(val email: String, val password: String)
+//{
+//
+//    lateinit var email: String
+//    lateinit var password: String
+//}

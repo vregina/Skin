@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".register.view.RegisterSkinToneFragment">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="218dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="364dp"
+        android:fontFamily="@font/lato"
+        android:text="Bem-vindo ao Skin!"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_next"
+        style="@style/MyAppButton"
+        android:layout_width="241dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bt_orange_shape"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Receber sugestão de rotina"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/bt_next2"
+        style="@style/MyAppButton"
+        android:layout_width="241dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bt_orange_shape"
+        android:fontFamily="@font/lato"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Já tenho uma rotina"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_next" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="290dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="8dp"
+        android:text="Agora que ja te conhecemos melhor, podemos te indicar uma rotina adequada para o seu tipo de pele, caso já tenha uma, você já pode cadastrar seus lembretes."
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="302dp"
+        android:src="@drawable/ic_app_logo_peach"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_skin_text"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="131dp"
+        android:src="@drawable/ic_ellipse_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_ellipse_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,20 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import com.example.skin.R
-import com.example.skin.home.presenter.HomeFragmentPresenter
-import com.example.skin.register.presenter.RegisterFragmentPresenter
 
-
-class RegisterFragment : Fragment() {
-
-    lateinit var presenter: RegisterFragmentPresenter
-    lateinit var buttonContinue: Button
+class RegisterSuccessFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        presenter = RegisterFragmentPresenter(this)
+        arguments?.let {
+
+        }
     }
 
     override fun onCreateView(
@@ -26,28 +21,14 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false)
+        return inflater.inflate(R.layout.fragment_register_success, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter = RegisterFragmentPresenter(this)
-    }
-
-//        val buttonContinue = view?.findViewById<Button>(R.id.bt_continue_register)
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        //INICIALIZAR TODOS OS COMPONENTES
-        activity?.let {
-            buttonContinue = it.findViewById<Button>(R.id.bt_continue_register)
-        }
-
-        buttonContinue.setOnClickListener { v ->
-            (activity as? RegisterActivity)?.showRegisterSkinToneFragment()
-        }
 
     }
+
 
     companion object {
         /**
@@ -61,12 +42,10 @@ class RegisterFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            RegisterFragment().apply {
+            RegisterSuccessFragment().apply {
                 arguments = Bundle().apply {
-
 
                 }
             }
     }
 }
-
