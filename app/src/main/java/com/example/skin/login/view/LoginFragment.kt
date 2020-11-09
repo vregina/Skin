@@ -41,7 +41,7 @@ class LoginFragment : Fragment() {
 
         val buttonRegister = view.findViewById<ConstraintLayout>(R.id.bt_register)
 
-        val buttonLogin = view.findViewById<Button>(R.id.bt_login)
+        val buttonLogin = view.findViewById<Button>(R.id.bt_send)
 
         buttonLogin.setOnClickListener { v ->
             presenter.facaLogin((textEmail.text.toString()), textSenha.text.toString())

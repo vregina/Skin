@@ -5,10 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.example.skin.R
+import com.example.skin.home.view.HomeActivity
+import com.example.skin.login.view.LoginActivity
 import com.example.skin.register.view.RegisterSkinDetailsFragment
 
 class RecoverPasswordFragment : Fragment() {
+
+
+    lateinit var sendButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -26,6 +33,20 @@ class RecoverPasswordFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+    }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        //INICIALIZAR TODOS OS COMPONENTES
+        activity?.let {
+            sendButton = it.findViewById<Button>(R.id.bt_send)
+        }
+
+        sendButton.setOnClickListener {
+            (activity as LoginActivity).showRecoverSetCodeFragment()
+        }
 
     }
 

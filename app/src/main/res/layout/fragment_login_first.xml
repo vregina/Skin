@@ -107,7 +107,7 @@
 
 
             <Button
-                android:id="@+id/bt_login"
+                android:id="@+id/bt_send"
                 style="@style/MyAppButton"
                 android:layout_width="214dp"
                 android:layout_height="49dp"
@@ -130,7 +130,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="93dp"
                 android:layout_height="88dp"
-                android:layout_marginTop="72dp"
+                android:layout_marginTop="32dp"
                 android:src="@drawable/ic_app_logo_peach"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +168,7 @@
                 android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bt_login">
+                app:layout_constraintTop_toBottomOf="@+id/bt_send">
 
                 <TextView
                     android:id="@+id/tv_register"

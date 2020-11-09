@@ -8,6 +8,8 @@ import com.example.skin.R
 import com.example.skin.addchore.view.AddChoreActivity.Companion.newIntent
 import com.example.skin.home.view.HomeActivity
 import com.example.skin.recover.view.RecoverPasswordFragment
+import com.example.skin.recover.view.RecoverSetCodeFragment
+import com.example.skin.recover.view.RecoverSuccessSplash
 import com.example.skin.register.view.RegisterActivity
 import com.example.skin.register.view.RegisterFragment
 
@@ -49,6 +51,24 @@ class LoginActivity : AppCompatActivity() {
     fun showRecoverPasswordFragment() {
         val transaction = this.supportFragmentManager.beginTransaction()
         val fragmentGoTo = RecoverPasswordFragment()
+
+        transaction.replace(R.id.container, fragmentGoTo)
+        transaction.commit()
+
+    }
+
+    fun showRecoverSetCodeFragment() {
+        val transaction = this.supportFragmentManager.beginTransaction()
+        val fragmentGoTo = RecoverSetCodeFragment()
+
+        transaction.replace(R.id.container, fragmentGoTo)
+        transaction.commit()
+
+    }
+
+    fun showRecoverSuccessSplah() {
+        val transaction = this.supportFragmentManager.beginTransaction()
+        val fragmentGoTo = RecoverSuccessSplash()
 
         transaction.replace(R.id.container, fragmentGoTo)
         transaction.commit()
